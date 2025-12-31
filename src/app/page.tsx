@@ -64,31 +64,69 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center bg-background text-foreground">
         <div className="new-container relative !border-none sm:!border-dashed w-full">
           <Header />
-          
+
           {/* Hero Section */}
-          <motion.section 
-            className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-16"
+          <motion.section
+            className="relative flex flex-col gap-8 border-b border-dashed px-4 sm:px-6 py-16 overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            {/* Availability Badge */}
-            <div className="flex items-center gap-2 px-3 py-1.5 border border-dashed rounded-sm bg-muted/20 w-fit">
-              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              <span className="jetbrains-mono text-[10px] tracking-tight text-muted-foreground">Available for hire</span>
+            <div className="absolute inset-0 pointer-events-none">
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(circle at 18% 25%, rgba(96, 125, 255, 0.12), transparent 38%), " +
+                    "radial-gradient(circle at 82% 20%, rgba(96, 125, 255, 0.09), transparent 34%), " +
+                    "linear-gradient(120deg, rgba(96, 125, 255, 0.06), transparent 65%)",
+                }}
+              />
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight uppercase opacity-70">Hey, it's me</div>
-              <h1 className="instrument-serif text-5xl md:text-6xl font-normal tracking-tight">Harsh Jadhav</h1>
-              <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight opacity-70">@theharshjadhav</div>
+            <div className="flex flex-wrap items-center gap-3 relative z-10">
+              <div className="flex items-center gap-2 px-3 py-1.5 border border-dashed rounded-sm bg-muted/20 w-fit">
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                <span className="jetbrains-mono text-[10px] tracking-tight text-muted-foreground">Available for hire</span>
+              </div>
+              <div className="jetbrains-mono text-[11px] text-muted-foreground tracking-tight">Remote-first · Pune</div>
             </div>
 
-            <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight">
-              Building things that people use. Shipping fast, learning faster.<br/><br/>
-              Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>, exploring AI, freelancing, and occasionally touching grass.<br/><br/>
-              If it compiles and works, it ships.
-            </p>
+            <div className="flex flex-col gap-6 max-w-3xl relative z-10">
+              <div className="flex flex-col gap-3">
+                <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight uppercase">Hey, it's me</div>
+                <h1 className="instrument-serif text-5xl md:text-6xl font-normal tracking-tight">Harsh Jadhav</h1>
+                <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight">@theharshjadhav</div>
+                <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight">
+                  Building things that people use. Shipping fast, learning faster.<br /><br />
+                  Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>, exploring AI, freelancing, and occasionally touching grass.<br /><br />
+                  If it compiles and works, it ships.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  href="/projects"
+                  className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm hover:bg-muted/20 transition-colors"
+                >
+                  View work →
+                </Link>
+                <Link
+                  href="/contact"
+                  className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm bg-[rgba(96,125,255,0.12)] hover:bg-[rgba(96,125,255,0.18)] transition-colors"
+                >
+                  Say hello
+                </Link>
+                {latestPost && (
+                  <Link
+                    href={`/thoughts/${latestPost.slug}`}
+                    className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    Latest: {latestPost.title} →
+                  </Link>
+                )}
+              </div>
+            </div>
           </motion.section>
 
           {/* Work Experience */}
