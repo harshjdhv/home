@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import EducationSection from "@/components/sections/EducationSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import SkillsSection from "@/components/sections/SkillsSection";
 import { FloatingDockDemo } from "@/components/sections/dock-example";
 import Header from "@/components/layout/Header";
 
@@ -159,13 +160,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             <h2 className="jetbrains-mono text-sm font-medium tracking-tight">Skills</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Python", "TailwindCSS", "Git", "Docker", "AI/ML"].map((skill) => (
-                <div key={skill} className="flex items-center justify-center px-4 py-3 border border-dashed rounded-sm bg-muted/20">
-                  <span className="jetbrains-mono text-xs text-muted-foreground tracking-tight">{skill}</span>
-                </div>
-              ))}
-            </div>
+            <SkillsSection />
           </motion.section>
 
           {/* Projects */}
