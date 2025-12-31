@@ -8,29 +8,10 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import { FloatingDockDemo } from "@/components/sections/dock-example";
 import Header from "@/components/layout/Header";
 
-type LatestPost = {
-  title: string;
-  excerpt: string;
-  slug: string;
-  date: string;
-};
-
 export default function Home() {
   const [email, setEmail] = React.useState('');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [message, setMessage] = React.useState('');
-  const [latestPost, setLatestPost] = React.useState<LatestPost | null>(null);
-
-  React.useEffect(() => {
-    fetch('/api/thoughts')
-      .then(res => res.json())
-      .then(data => {
-        if (data.posts && data.posts.length > 0) {
-          setLatestPost(data.posts[0]);
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,7 +70,6 @@ export default function Home() {
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 <span className="jetbrains-mono text-[10px] tracking-tight text-muted-foreground">Available for hire</span>
               </div>
-              <div className="jetbrains-mono text-[11px] text-muted-foreground tracking-tight">Remote-first · Pune</div>
             </div>
 
             <div className="flex flex-col gap-6 max-w-3xl relative z-10">
@@ -100,31 +80,25 @@ export default function Home() {
                 <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight">
                   Building things that people use. Shipping fast, learning faster.<br /><br />
                   Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>, exploring AI, freelancing, and occasionally touching grass.<br /><br />
-                  If it compiles and works, it ships.
+                  If it compiles and works, it ships. Sometimes <Link href="/thoughts" className="jetbrains-mono text-sm text-muted-foreground tracking-tight underline underline-offset-2 decoration-muted-foreground/50 hover:decoration-foreground transition-colors">I write about it too</Link>.
                 </p>
               </div>
 
               <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href="/projects"
+                <button
+                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                   className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm hover:bg-muted/20 transition-colors"
                 >
                   View work →
-                </Link>
-                <Link
-                  href="/contact"
+                </button>
+                <a
+                  href="https://x.com/harshjdhv"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="jetbrains-mono text-xs px-4 py-2 border border-dashed rounded-sm bg-[rgba(96,125,255,0.12)] hover:bg-[rgba(96,125,255,0.18)] transition-colors"
                 >
                   Say hello
-                </Link>
-                {latestPost && (
-                  <Link
-                    href={`/thoughts/${latestPost.slug}`}
-                    className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    Latest: {latestPost.title} →
-                  </Link>
-                )}
+                </a>
               </div>
             </div>
           </motion.section>
@@ -153,6 +127,7 @@ export default function Home() {
 
           {/* Projects */}
           <motion.section 
+            id="projects"
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
