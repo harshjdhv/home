@@ -7,6 +7,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import { FloatingDockDemo } from "@/components/sections/dock-example";
 import Header from "@/components/layout/Header";
+import { RotatingText } from "@/components/ui/rotating-text";
 
 export default function Home() {
   const [email, setEmail] = React.useState('');
@@ -44,45 +45,38 @@ export default function Home() {
     <>
       <div className="min-h-screen flex flex-col items-center bg-background text-foreground">
         <div className="new-container relative !border-none sm:!border-dashed w-full">
-          <Header />
-
           {/* Hero Section */}
           <motion.section
-            className="relative flex flex-col gap-8 border-b border-dashed px-4 sm:px-6 py-16 overflow-hidden"
+            className="relative flex flex-col items-start gap-6 border-y border-dashed px-4 sm:px-6 py-8 mt-32 overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <div className="absolute inset-0 pointer-events-none">
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(circle at 18% 25%, rgba(96, 125, 255, 0.12), transparent 38%), " +
-                    "radial-gradient(circle at 82% 20%, rgba(96, 125, 255, 0.09), transparent 34%), " +
-                    "linear-gradient(120deg, rgba(96, 125, 255, 0.06), transparent 65%)",
-                }}
-              />
-            </div>
+            <div className="flex flex-col gap-6 w-full relative z-10">
+              <div className="flex items-start justify-between w-full">
+                <div className="flex flex-row items-center gap-4">
+                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border border-dashed border-muted-foreground/20 shrink-0">
+                    <img
+                      src="/portfolio/assets/profile.jpg"
+                      alt="Harsh Jadhav"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="flex flex-col pt-2 min-w-[200px]">
+                    <h1 className="instrument-serif text-3xl sm:text-4xl font-normal tracking-tight mb-1">Harsh Jadhav</h1>
+                    <RotatingText texts={['Software Engineer', 'Freelancer', 'OSS Contributor']} />
+                  </div>
+                </div>
 
-            <div className="flex flex-wrap items-center gap-3 relative z-10">
-              <div className="flex items-center gap-2 px-3 py-1.5 border border-dashed rounded-sm bg-muted/20 w-fit">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="jetbrains-mono text-[10px] tracking-tight text-muted-foreground">Available for hire</span>
+                <div className="flex items-center gap-2 px-3 py-1.5 border border-dashed rounded-sm bg-muted/20 w-fit h-fit">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="jetbrains-mono text-[10px] tracking-tight text-muted-foreground hidden sm:inline-block">Available for hire</span>
+                </div>
               </div>
-            </div>
 
-            <div className="flex flex-col gap-6 max-w-3xl relative z-10">
-              <div className="flex flex-col gap-3">
-                <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight uppercase">Hey, it's me</div>
-                <h1 className="instrument-serif text-5xl md:text-6xl font-normal tracking-tight">Harsh Jadhav</h1>
-                <div className="jetbrains-mono text-muted-foreground text-xs tracking-tight">@theharshjadhav</div>
-                <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight">
-                  Building things that people use. Shipping fast, learning faster.<br /><br />
-                  Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>, exploring AI, freelancing, and occasionally touching grass.<br /><br />
-                  If it compiles and works, it ships. Sometimes <Link href="/thoughts" className="jetbrains-mono text-sm text-muted-foreground tracking-tight underline underline-offset-2 decoration-muted-foreground/50 hover:decoration-foreground transition-colors">I write about it too</Link>.
-                </p>
-              </div>
+              <p className="jetbrains-mono text-sm text-muted-foreground max-w-xl tracking-tight leading-relaxed">
+                Building things that people use. Shipping fast, learning faster. Currently neck-deep in <span className="text-foreground font-medium">Solana</span> and <span className="text-foreground font-medium">Web3</span>.
+              </p>
 
               <div className="flex flex-wrap items-center gap-3">
                 <button
@@ -104,7 +98,7 @@ export default function Home() {
           </motion.section>
 
           {/* Work Experience */}
-          <motion.section 
+          <motion.section
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +109,7 @@ export default function Home() {
           </motion.section>
 
           {/* Skills */}
-          <motion.section 
+          <motion.section
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,7 +120,7 @@ export default function Home() {
           </motion.section>
 
           {/* Projects */}
-          <motion.section 
+          <motion.section
             id="projects"
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +131,7 @@ export default function Home() {
           </motion.section>
 
           {/* Newsletter Subscribe */}
-          <motion.section 
+          <motion.section
             className="flex flex-col gap-6 border-b border-dashed px-4 sm:px-6 py-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
