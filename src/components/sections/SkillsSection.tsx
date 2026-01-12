@@ -56,42 +56,42 @@ const skillsRow2: Skill[] = [
   { name: "System Design", icon: <Cpu size={14} /> },
 ];
 
-const Marquee = ({ 
-  skills, 
+const Marquee = ({
+  skills,
   reverse = false,
   speed = 25,
-}: { 
-  skills: Skill[]; 
+}: {
+  skills: Skill[];
   reverse?: boolean;
   speed?: number;
 }) => {
   const duplicatedSkills = [...skills, ...skills];
-  
+
   return (
     <div className="relative flex overflow-hidden group">
-      <div 
+      <div
         className={`flex gap-4 py-3 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`}
-        style={{ 
+        style={{
           animationDuration: `${speed}s`,
         }}
       >
         {duplicatedSkills.map((skill, idx) => (
           <div
             key={`${skill.name}-${idx}`}
-            className="flex items-center gap-2 px-4 py-2 border border-dashed rounded-sm bg-muted/10 hover:bg-muted/30 hover:border-foreground/20 transition-all duration-300 whitespace-nowrap cursor-default"
+            className="flex items-center gap-2 px-4 py-2 border border-dashed rounded-full bg-muted/10 hover:bg-muted/30 hover:border-foreground/20 transition-all duration-300 whitespace-nowrap cursor-default"
           >
             <span className="text-muted-foreground">
               {skill.icon}
             </span>
-            <span className="jetbrains-mono text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors">
+            <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground/80 transition-colors">
               {skill.name}
             </span>
           </div>
         ))}
       </div>
-      <div 
+      <div
         className={`flex gap-4 py-3 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'}`}
-        style={{ 
+        style={{
           animationDuration: `${speed}s`,
         }}
         aria-hidden
@@ -99,12 +99,12 @@ const Marquee = ({
         {duplicatedSkills.map((skill, idx) => (
           <div
             key={`${skill.name}-dup-${idx}`}
-            className="flex items-center gap-2 px-4 py-2 border border-dashed rounded-sm bg-muted/10 hover:bg-muted/30 hover:border-foreground/20 transition-all duration-300 whitespace-nowrap cursor-default"
+            className="flex items-center gap-2 px-4 py-2 border border-dashed rounded-full bg-muted/10 hover:bg-muted/30 hover:border-foreground/20 transition-all duration-300 whitespace-nowrap cursor-default"
           >
             <span className="text-muted-foreground">
               {skill.icon}
             </span>
-            <span className="jetbrains-mono text-xs text-muted-foreground transition-colors">
+            <span className="text-xs font-medium text-muted-foreground transition-colors">
               {skill.name}
             </span>
           </div>

@@ -28,35 +28,35 @@ const ExperienceSection = () => {
   return (
     <div className="flex flex-col">
       {experiences.map((exp, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className={`py-4 ${index !== experiences.length - 1 ? "border-b border-dashed" : ""}`}
         >
           <div className="flex items-center justify-between gap-4 mb-1">
             <div className="flex items-center gap-2">
-              <h3 className="jetbrains-mono text-sm font-medium tracking-tight">
+              <h3 className="text-sm font-medium tracking-tight text-foreground">
                 {exp.position}
               </h3>
               <span className="text-muted-foreground/30">·</span>
               {exp.url ? (
-                <Link 
-                  href={exp.url} 
+                <Link
+                  href={exp.url}
                   target="_blank"
-                  className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {exp.company} ↗
                 </Link>
               ) : (
-                <span className="jetbrains-mono text-xs text-muted-foreground">
+                <span className="text-xs text-muted-foreground">
                   {exp.company}
                 </span>
               )}
             </div>
-            <span className="jetbrains-mono text-[10px] text-muted-foreground shrink-0">
+            <span className="text-xs text-muted-foreground shrink-0 font-medium opacity-70">
               {exp.period}
             </span>
           </div>
-          <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight leading-relaxed">
+          <p className="text-sm text-muted-foreground tracking-tight leading-relaxed">
             {exp.description}
           </p>
         </div>

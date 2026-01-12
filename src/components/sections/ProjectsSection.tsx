@@ -48,10 +48,10 @@ const ProjectsSection = () => {
     return (
         <section className="flex flex-col gap-6">
             <div className="flex items-center justify-between">
-                <h2 className="instrument-serif text-2xl tracking-tight">Projects</h2>
+                <h2 className="text-2xl font-medium tracking-tight">Projects</h2>
                 <Link
                     href="/projects"
-                    className="jetbrains-mono text-xs text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                     View all →
                 </Link>
@@ -64,34 +64,33 @@ const ProjectsSection = () => {
                         className={`group py-4 ${index !== projects.length - 1 ? "border-b border-dashed" : ""}`}
                     >
                         <div className="flex items-start gap-3">
-                            <span className="jetbrains-mono text-[10px] text-[rgb(96,125,255)] mt-1 shrink-0 w-4">
+                            <span className="text-xs font-medium text-[rgb(96,125,255)] mt-1 shrink-0 w-4 opacity-70">
                                 {String(index + 1).padStart(2, '0')}
                             </span>
                             <div className="flex-1 min-w-0">
                                 <div className="flex items-center justify-between gap-4 mb-1.5">
-                                    <h3 className="jetbrains-mono text-sm font-medium tracking-tight">
+                                    <h3 className="text-base font-medium tracking-tight text-foreground">
                                         {project.title}
                                     </h3>
                                     <div className="flex items-center gap-2 shrink-0">
                                         <Link
                                             href={project.githubUrl}
                                             target="_blank"
-                                            className="jetbrains-mono text-[10px] text-muted-foreground hover:text-foreground transition-colors"
+                                            className="text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border px-2 py-0.5 rounded-full"
                                         >
                                             Code
                                         </Link>
-                                        <span className="text-muted-foreground/30">·</span>
                                         <Link
                                             href={project.liveUrl}
                                             target="_blank"
-                                            className="jetbrains-mono text-[10px] text-muted-foreground hover:text-foreground transition-colors"
+                                            className="text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border px-2 py-0.5 rounded-full"
                                         >
-                                            Live →
+                                            Live
                                         </Link>
                                     </div>
                                 </div>
-                                
-                                <p className="jetbrains-mono text-xs text-muted-foreground tracking-tight mb-2 leading-relaxed">
+
+                                <p className="text-sm text-muted-foreground tracking-tight mb-3 leading-relaxed">
                                     {project.description}
                                 </p>
 
@@ -99,7 +98,7 @@ const ProjectsSection = () => {
                                     {project.technologies.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="jetbrains-mono text-[10px] text-muted-foreground bg-muted/30 px-1.5 py-0.5 rounded-sm"
+                                            className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground bg-muted/40 px-2 py-1 rounded-sm"
                                         >
                                             {tech}
                                         </span>

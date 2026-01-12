@@ -22,7 +22,7 @@ export const RotatingText = ({ texts }: { texts: string[] }) => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.2 }}
-                    className="jetbrains-mono text-sm text-muted-foreground tracking-tight absolute top-0 left-0 whitespace-nowrap"
+                    className="text-base text-muted-foreground tracking-tight absolute top-0 left-0 whitespace-nowrap"
                 >
                     {texts[index]}
                 </motion.p>
