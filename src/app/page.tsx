@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
   return (
@@ -263,7 +264,7 @@ export default function Home() {
               04. Education
             </div>
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4 max-w-[55ch]">
-              <h3 className="font-medium text-neutral-900 text-base">B.E. Computer Science</h3>
+              <h3 className="font-medium text-neutral-900 text-base">B.E Information Technology</h3>
               <div className="flex items-center gap-3">
                 <span className="text-neutral-500 text-sm">Mumbai University</span>
                 <span className="font-mono-meta text-xs text-neutral-400">2021 - 2026</span>
