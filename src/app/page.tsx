@@ -290,13 +290,15 @@ export default function Home() {
 
           {/* Footer / Contact (Minimal) */}
           <footer className="pt-32 pb-16 flex flex-col gap-8 text-sm opacity-60 hover:opacity-100 transition-opacity duration-500">
-            <div className="flex flex-wrap gap-x-8 gap-y-4 font-mono-meta text-xs text-neutral-500">
-              <Link href="mailto:hello@harshjdhv.com" className="hover:text-black transition-colors">Email</Link>
-              <Link href="https://github.com/harshjdhv" className="hover:text-black transition-colors">GitHub</Link>
-              <Link href="https://x.com/harshjdhv" className="hover:text-black transition-colors">X.com</Link>
-              <Link href="https://linkedin.com/in/jadhavharsh" className="hover:text-black transition-colors">LinkedIn</Link>
+            <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-4 font-mono-meta text-xs text-neutral-500 max-w-[55ch]">
+              <div className="flex gap-6">
+                <Link href="mailto:hello@harshjdhv.com" className="hover:text-black transition-colors">Email</Link>
+                <Link href="https://github.com/harshjdhv" className="hover:text-black transition-colors">GitHub</Link>
+                <Link href="https://x.com/harshjdhv" className="hover:text-black transition-colors">X.com</Link>
+                <Link href="https://linkedin.com/in/jadhavharsh" className="hover:text-black transition-colors">LinkedIn</Link>
+              </div>
+              <span className="text-neutral-400">© {new Date().getFullYear()} Harsh Jadhav</span>
             </div>
-
           </footer>
 
         </section>
