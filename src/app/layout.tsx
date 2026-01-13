@@ -28,6 +28,7 @@ const geist = Geist({
 
 
 export const metadata = {
+  metadataBase: new URL("https://harshjdhv.com"),
   title: "Harsh Jadhav",
   description: "Building things that people use. Shipping fast, learning faster. Currently neck-deep in Solana and Web3, exploring AI, freelancing, and occasionally touching grass.",
   keywords: [
@@ -53,13 +54,13 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://harshjadhav.dev",
+    url: "https://harshjdhv.com",
     title: "Harsh Jadhav — Builder, Shipper, Learner",
     description: "Building things that people use. Shipping fast, learning faster. Currently neck-deep in Solana and Web3.",
     siteName: "Harsh Jadhav",
     images: [
       {
-        url: "https://harshjadhav.dev/image.png",
+        url: "/linkbannerpreview.png",
         width: 1200,
         height: 630,
         alt: "Harsh Jadhav",
@@ -71,7 +72,7 @@ export const metadata = {
     title: "Harsh Jadhav — Builder, Shipper, Learner",
     description: "Building things that people use. Shipping fast, learning faster. Currently neck-deep in Solana and Web3.",
     creator: "@theharshjadhav",
-    images: ["https://harshjadhav.dev/image.png"],
+    images: ["/linkbannerpreview.png"],
   },
   icons: {
     icon: '/favicon.svg',
