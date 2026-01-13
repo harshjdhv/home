@@ -114,7 +114,7 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-sm group-hover:text-neutral-600 transition-colors">Componentry</h3>
+                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">Componentry</h3>
                     <svg
                       className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
@@ -141,7 +141,7 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-sm group-hover:text-neutral-600 transition-colors">GameSideVault</h3>
+                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">GameSideVault</h3>
                     <svg
                       className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
@@ -168,7 +168,7 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-sm group-hover:text-neutral-600 transition-colors">Perpetual Trading Platform</h3>
+                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">Perpetual Trading Platform</h3>
                     <svg
                       className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
@@ -195,7 +195,7 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-between max-w-[55ch]">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-medium text-neutral-900 text-sm group-hover:text-neutral-600 transition-colors">AnchorPay</h3>
+                    <h3 className="font-medium text-neutral-900 text-base group-hover:text-neutral-600 transition-colors">AnchorPay</h3>
                     <svg
                       className="w-3.5 h-3.5 text-neutral-400 group-hover:text-neutral-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                       fill="none"
@@ -257,7 +257,7 @@ export default function Home() {
               04. Education
             </div>
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4 max-w-[55ch]">
-              <h3 className="font-medium text-neutral-900 text-sm">B.E. Computer Science</h3>
+              <h3 className="font-medium text-neutral-900 text-base">B.E. Computer Science</h3>
               <div className="flex items-center gap-3">
                 <span className="text-neutral-500 text-sm">Mumbai University</span>
                 <span className="font-mono-meta text-xs text-neutral-400">2021</span>
