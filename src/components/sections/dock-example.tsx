@@ -30,14 +30,14 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://github.com/jadhavharshh",
+      href: "https://github.com/harshjdhv",
     },
     {
       title: "LinkedIn",
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://linkedin.com/in/jadhavharsh", 
+      href: "https://linkedin.com/in/jadhavharsh",
     },
     {
       title: "X (Twitter)",

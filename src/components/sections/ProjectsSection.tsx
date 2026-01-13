@@ -16,7 +16,7 @@ const projects: Project[] = [
         description: "Modern UI component library with accessible, customizable components for React applications.",
         technologies: ["React", "TypeScript", "Tailwind", "Storybook"],
         liveUrl: "https://componentry.fun",
-        githubUrl: "https://github.com/jadhavharshh/componentry",
+        githubUrl: "https://github.com/harshjdhv/componentry",
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const projects: Project[] = [
         description: "Secure crypto wallet infrastructure with multi-chain support and automated fund management.",
         technologies: ["Node.js", "HashiCorp Vault", "Ethereum", "Bitcoin"],
         liveUrl: "https://gamesidevault.com",
-        githubUrl: "https://github.com/jadhavharshh/gamesidevault",
+        githubUrl: "https://github.com/harshjdhv/gamesidevault",
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const projects: Project[] = [
         description: "SEI blockchain perpetual trading platform with real-time charts and wallet integration.",
         technologies: ["Next.js", "TypeScript", "SEI", "WebSocket"],
         liveUrl: "https://perpetual-demo.com",
-        githubUrl: "https://github.com/jadhavharshh/perpetual",
+        githubUrl: "https://github.com/harshjdhv/perpetual",
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const projects: Project[] = [
         description: "Escrow payment platform for freelancers and clients with secure fund locking and milestone-based releases.",
         technologies: ["Next.js", "Solana", "Anchor", "TypeScript"],
         liveUrl: "https://anchorpay.app",
-        githubUrl: "https://github.com/jadhavharshh/anchorpay",
+        githubUrl: "https://github.com/harshjdhv/anchorpay",
     },
 ];
 

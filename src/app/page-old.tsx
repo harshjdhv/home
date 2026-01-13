@@ -213,7 +213,7 @@ export default function Home() {
                   <p className="font-medium mb-2">Unable to load GitHub contributions</p>
                   <p className="text-sm mb-4">Check out my profile directly for the latest activity</p>
                   <Link
-                    href="https://github.com/jadhavharshh"
+                    href="https://github.com/harshjdhv"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity text-sm"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
