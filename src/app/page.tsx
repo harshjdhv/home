@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ModeToggle } from "@/components/mode-toggle";
 import { CopyEmail } from "@/components/copy-email";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, GitPullRequest } from "lucide-react";
 
 export default function Home() {
   return (
@@ -160,7 +160,76 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 03. WRITING */}
+          {/* 03. OPEN SOURCE */}
+          <div className="flex flex-col gap-5">
+            <div className="font-mono-meta text-[11px] text-neutral-400 uppercase tracking-widest border-b border-border pb-2 w-full">
+              Open Source
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <Link href="https://github.com/RocketChat/Rocket.Chat/pull/38040" target="_blank" className="group flex items-center justify-between py-2 border-b border-border/40 last:border-0">
+                <div className="flex items-center gap-3">
+                  <GitPullRequest className="w-4 h-4 text-neutral-400" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                    <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">Rocket.Chat</span>
+                    <span className="hidden sm:block text-neutral-400 text-xs">/</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Fix video conference icons</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono-meta text-[10px] text-neutral-400 group-hover:text-foreground">#38040</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-300 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+              </Link>
+
+              <Link href="https://github.com/calcom/cal.com/pull/23525" target="_blank" className="group flex items-center justify-between py-2 border-b border-border/40 last:border-0">
+                <div className="flex items-center gap-3">
+                  <GitPullRequest className="w-4 h-4 text-neutral-400" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                    <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">Cal.com</span>
+                    <span className="hidden sm:block text-neutral-400 text-xs">/</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Create Event modal responsive fix</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono-meta text-[10px] text-neutral-400 group-hover:text-foreground">#23525</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-300 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+              </Link>
+
+              <Link href="https://github.com/activepieces/activepieces/pull/8003" target="_blank" className="group flex items-center justify-between py-2 border-b border-border/40 last:border-0">
+                <div className="flex items-center gap-3">
+                  <GitPullRequest className="w-4 h-4 text-neutral-400" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                    <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">ActivePieces</span>
+                    <span className="hidden sm:block text-neutral-400 text-xs">/</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Custom API domain support</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono-meta text-[10px] text-neutral-400 group-hover:text-foreground">#8003</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-300 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+              </Link>
+
+              <Link href="https://github.com/collabute/ossdotnow/pull/78" target="_blank" className="group flex items-center justify-between py-2 border-b border-border/40 last:border-0">
+                <div className="flex items-center gap-3">
+                  <GitPullRequest className="w-4 h-4 text-neutral-400" />
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                    <span className="font-medium text-sm text-foreground group-hover:text-muted-foreground transition-colors">oss.now</span>
+                    <span className="hidden sm:block text-neutral-400 text-xs">/</span>
+                    <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">Project Card component</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono-meta text-[10px] text-neutral-400 group-hover:text-foreground">#78</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-300 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* 04. WRITING */}
           <div className="flex flex-col gap-5">
             <div className="font-mono-meta text-[11px] text-neutral-400 uppercase tracking-widest border-b border-border pb-2 w-full">
               Writing
