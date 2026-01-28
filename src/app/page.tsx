@@ -7,11 +7,11 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full px-6 py-24 md:py-32">
-      <div className="max-w-[600px] mx-auto flex flex-col gap-20">
+    <main className="min-h-screen w-full px-6 py-12 md:py-20">
+      <div className="max-w-[600px] mx-auto flex flex-col gap-10">
 
         {/* -- Header: Identity -- */}
-        <header className="flex flex-col gap-8 select-none">
+        <header className="flex flex-col gap-5 select-none">
           <div className="flex flex-row items-center gap-4">
             <Image
               src="https://avatars.githubusercontent.com/u/182950168?v=4"
@@ -30,13 +30,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 max-w-[50ch]">
+          <div className="flex flex-col gap-4 max-w-[50ch]">
             <p className="text-muted-foreground leading-relaxed">
               I build things from zero. <br />
               Currently building on Solana. Focused on web interfaces and crypto tooling. If it's boring and reliable, it's good enough to ship.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-2">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 pt-1">
               <div className="flex items-center gap-4 text-muted-foreground">
                 <Link href="https://github.com/harshjdhv" target="_blank" className="hover:text-foreground transition-colors">
                   <FaGithub size={18} />
@@ -53,23 +53,21 @@ export default function Home() {
 
               <div className="flex items-center gap-4">
                 <CopyEmail />
-                <div className="w-px h-4 bg-border"></div>
-                <ModeToggle />
               </div>
             </div>
           </div>
         </header>
 
         {/* -- Main Content Stream -- */}
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-12">
 
           {/* 01. EXPERIENCE */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
             <div className="font-mono-meta text-[11px] text-neutral-400 uppercase tracking-widest border-b border-border pb-2 w-full">
               Experience
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6">
               {/* Role 1 */}
               <div className="group flex flex-col gap-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
@@ -98,12 +96,12 @@ export default function Home() {
           </div>
 
           {/* 02. SELECTED WORK */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
             <div className="font-mono-meta text-[11px] text-neutral-400 uppercase tracking-widest border-b border-border pb-2 w-full">
               Selected Work
             </div>
 
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-6">
               {/* Project 1 */}
               <Link href="https://componentry.fun" target="_blank" className="group flex flex-col gap-2 cursor-pointer">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
@@ -163,12 +161,12 @@ export default function Home() {
           </div>
 
           {/* 03. WRITING */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
             <div className="font-mono-meta text-[11px] text-neutral-400 uppercase tracking-widest border-b border-border pb-2 w-full">
               Writing
             </div>
 
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-3">
               <li className="flex items-center gap-4 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer group">
                 <span className="w-1.5 h-1.5 bg-neutral-300 rounded-full group-hover:bg-neutral-500 transition-colors"></span>
                 <span className="border-b border-transparent group-hover:border-foreground decoration-1 underline-offset-4">
@@ -180,8 +178,9 @@ export default function Home() {
         </div>
 
         {/* -- Footer -- */}
-        <footer className="pt-10 flex flex-col gap-4 text-sm opacity-60">
+        <footer className="pt-10 flex flex-row items-center justify-between gap-4 text-sm opacity-60">
           <span className="font-mono-meta text-xs text-neutral-400">© {new Date().getFullYear()} Harsh Jadhav</span>
+          <ModeToggle />
         </footer>
 
       </div>
