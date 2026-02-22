@@ -9,6 +9,8 @@ import { sharedMetadata, sharedViewport } from "./shared-metadata";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 
