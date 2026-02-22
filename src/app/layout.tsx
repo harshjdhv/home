@@ -1,31 +1,14 @@
 // app/layout.tsx
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import {
-  JetBrains_Mono,
-  Instrument_Serif,
-  Geist
-} from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import JsonLd from "@/components/json-ld";
 import { sharedMetadata, sharedViewport } from "./shared-metadata";
 
-const jetbrains = JetBrains_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  weight: ["400"],
-});
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-inter",
 });
 
 
@@ -36,18 +19,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${jetbrains.variable} ${instrumentSerif.variable} ${geist.variable}`}
+      className={`${inter.variable}`}
       suppressHydrationWarning
     >
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <Analytics />
           <JsonLd />
+          <div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-24 backdrop-blur-md [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
+          <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 h-24 backdrop-blur-md [mask-image:linear-gradient(to_top,white,transparent)]"></div>
           {children}
         </ThemeProvider>
       </body>

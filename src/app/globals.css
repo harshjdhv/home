@@ -8,8 +8,8 @@
   --color-border: var(--border);
   --color-selection-bg: var(--selection-bg);
   --color-selection-text: var(--selection-text);
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-jetbrains);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
   
   /* Minimal Paper Theme */
   --neutral-50: #FAFAFA;
@@ -62,10 +62,10 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.428;
 }
 
 ::selection {
@@ -75,9 +75,9 @@ body {
 
 /* Utility classes for typography */
 .font-serif-accent {
-  font-family: var(--font-instrument-serif), serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
 .font-mono-meta {
-  font-family: var(--font-jetbrains), monospace;
+  font-family: var(--font-inter), sans-serif;
 }
