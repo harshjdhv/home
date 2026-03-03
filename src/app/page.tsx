@@ -4,6 +4,7 @@ import { CopyEmail } from "@/components/copy-email";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRight, GitPullRequest, PenTool } from "lucide-react";
 
+
 const EXPERIENCES = [
   {
     role: "Software Engineer",
