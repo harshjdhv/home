@@ -9,54 +9,42 @@
   --color-selection-bg: var(--selection-bg);
   --color-selection-text: var(--selection-text);
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-serif);
   --font-mono: var(--font-inter);
-
-  /* Minimal Paper Theme */
-  --neutral-50: #fafafa;
-  --neutral-100: #f5f5f5;
-  --neutral-200: #e5e5e5;
-  --neutral-300: #d4d4d4;
-  --neutral-400: #a3a3a3;
-  --neutral-500: #737373;
-  --neutral-600: #525252;
-  --neutral-700: #404040;
-  --neutral-800: #262626;
-  --neutral-900: #171717;
-  --neutral-950: #0a0a0a;
 }
 
 :root {
-  /* Paper-like background (Zinc-50) */
-  --background: #fdfdfc;
-  --foreground: #171717;
+  /* Premium Light Theme */
+  --background: #F7F7F7;
+  --foreground: #111111;
 
-  /* Muted tones for meta-data */
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
+  /* Muted tones for light mode */
+  --muted: #F0F0F0;
+  --muted-foreground: #777777;
 
   /* Border colors */
-  --border: #e5e5e5;
+  --border: #E5E5E5;
 
   /* Selection */
-  --selection-bg: #e5e5e5;
-  --selection-text: #171717;
+  --selection-bg: #E0E0E0;
+  --selection-text: #111111;
 }
 
 .dark {
-  /* Custom dark background */
-  --background: #100f0f;
-  --foreground: #fafafa;
+  /* Premium Dark Theme */
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
 
   /* Muted tones for dark mode */
-  --muted: #262626;
-  --muted-foreground: #a3a3a3;
+  --muted: #1A1A1A;
+  --muted-foreground: #9A9A9A;
 
   /* Border colors */
   --border: #262626;
 
   /* Selection */
-  --selection-bg: #404040;
-  --selection-text: #fafafa;
+  --selection-bg: #EDEDED;
+  --selection-text: #0A0A0A;
 }
 
 body {
@@ -75,7 +63,7 @@ body {
 
 /* Utility classes for typography */
 .font-serif-accent {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-serif), serif;
 }
 
 .font-mono-meta {
